@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #18181B;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav-bar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+.nav-bar nav .logo a{
+    font-size: 48px;
+    font-family: 'Teko', sans-serif;
+    color: white;
+}
+
+.nav-bar nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-bar nav ul li a{
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav-bar nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    top: 30px;
+    left: 0;
+    bottom: 0;
+    background: gold;
+    transition: all 0.3s ease;
+}
+
+.nav-bar nav ul li a:hover::after {
+    width: 80%;
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1d4ed8;
+    font-size: 18px;
+    font-family: 'MontSerrat', sans-serif;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.btn:hover{
+    background-color: #1e40af;
+}
+
+.nav-bar .linha-nav {
+    width: 100%;
+    height: 2px;
+    background-color: gold;
+    line-height: 1px;
+    margin-top: -20px;
+    padding: 0;
+}
+
+.conteudo {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 3rem;
+}
+
+.conteudo .blur {
+    position: absolute;
+    box-shadow: 0px 0px 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+
+header {
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.content h4 {
+    color: #ccc;
+    font-size: 18px;
+}
+
+.content h1 {
+    font-size: 48px;
+}
+
+.content h1 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+.content p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.content .btn {
+    text-transform: uppercase;
+}
+
+.container .imagem img{
+    width: 600px;
+}
+
+/* Estilos para telas grandes */
+@media only screen and (min-width: 1024px) {
+    .conteudo {
+      padding: 5rem 10%;
+    }
+  }
+  
+  /* Estilos para telas médias */
+  @media only screen and (max-width: 1023px) {
+    .conteudo {
+      padding: 5rem 5%;
+    }
+  }
+  
+  /* Estilos para telas pequenas (celulares) */
+  @media only screen and (max-width: 767px) {
+    .conteudo {
+      padding: 5rem 2%;
+    }
+  
+    .nav-bar nav {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .nav-bar nav .logo {
+      margin-bottom: 1rem;
+    }
+  }
